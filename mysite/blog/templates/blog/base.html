@@ -1,0 +1,86 @@
+<html>
+{% load staticfiles %}
+	<style type="text/css">
+	body{padding:0;margin:0;font-size:12px;color:#000000;background-image:url({% static 'blog/images/divbg.jpg' %});background-repeat:no-repeat;background-size:100%;text-align:center;}
+	h2{color:#222;border-top:1px dotted #fff; margin-top:2em}
+	p{margin:1em 0}
+	#divAll{width:960px;margin:0 auto; padding:0;}
+	#divPage{width:948px;margin:0;padding:0 6px 0 6px; text-align:left;float:left;background-image:url({% static 'blog/images/divPage.png' %});}
+	#divMiddle{width:948;margin:0;padding:0;text-align:left;float:left;background-color:#eeeade;}
+	#divTop{width:948px;margin:0 auto;padding:0;text-align:center;float:left;height:160px;background-image: url({% static 'blog/images/divTop.jpg' %});border-bottom:1px solid #666;}
+	#BlogTitle{font-size:38px;margin:32px 0 0 20px;padding:0;font-weight:bold;font-family:"Times New Roman",Georgia,Serif;}
+	#BlogSubTitle{color:#484848;font-size:14px;magin:4px 0 0 20px;padding:0;}
+	#BlogTitle a{color:484848;}
+	a:visited{color:670E1A;}
+	a:link{color:4E0A13;}
+	a{text-decoration:none;}
+	#divNavBar{float:left;width:948px;border-bottom:1px solid #969EA4;background-image:url({% static 'blog/images/divNavBar.jpg' %});height:24px;white-space:nowrap;overflow:hidden;}
+	#divNavBar ul{margin:0;padding:0;}
+	ul{list-style-type:none;list-style-position:outside;word-break: break-all;}
+	#divNavBar li{display:inline;float:left;padding :0;margin:0;background:url({% static 'blog/images/bg_line.jpg' %}) no-repeat right 0;}
+	#divNavBar a:link{color:#5ea5fc;}
+	#divNavBar a{float:left;margin:0;padding:6px 10px 4px 10px; height:14px;text-decoration:none;}
+	#divMain{width:738px;margin:0;padding:0;text-align:left;float:right;background-color:#f6f4e9;}
+	#divSidebar{width:190px;margin:0;padding:0 0 2px 0;text-align:center;background-color:#eeeade;}
+	#divBottom{width:948px;margin:0 auto;padding:0;text-align:center;float:left;height:90px;background:url({% static 'blog/images/bg_bottom.gif' %}) repeat-x 0 0;}
+	#blogPowerBy{color:#cccccc;font-size:12px;height:30px;margin:0;padding:10px 10px 0 10px;text-align:center;font-weight:normal;}
+	div.function{float:left;width:190px;margin:10px 0 0 0;padding:0;text-align:left;border-left:10px solid #eeeade;boder-right:10px solid #eeeade;}
+	div.function h3{font-size:12px;height:16px;margin:0;padding:5px 0 0 5px;color:#484848;background:url({% static 'blog/images/nav_bg1.gif' %}) repeat-x;}
+	div.function ul{text-align:left;width:190px;margin:2px 0 0 0;padding:5px 0 0 0;list-style-position:outside;list-style-type:none;border-top:1px solid #d0d0d0;}
+	div.function li{margin:0;padding:2px 0 2px 15px;}
+	</style>
+
+	<body>
+	<div id="divAll">
+	<div id="divpage">
+	<div id="divMiddle">
+		<div id="divTop">
+			<div id="BlogTitle">
+				<a href="/blog/blogs/">James's Blog</a>
+			</div><!--end BlogTitle -->
+			<div id="BlogSubTitle">
+			It's never too late to learn ...
+			</div><!--end BlogSubTitle -->
+		</div><!--end divTop -->
+
+
+		<div id="divNavBar">
+			<ul>
+				<li><a href='/blog/'>Home</a></li>
+				<li><a href='/blog/blogs'>Python</a></li>
+				<li><a href='/blog/blogs'>PHP</a></li>
+			</ul>
+		</div><!--end divNavBar -->
+
+
+		<div id="divMain">
+			Here's divMain...
+			{% block content %}
+			{% endblock %}
+		</div><!--end divMain -->
+
+
+		<div id="divSidebar">
+			<div class="function" id="james_qq">
+				<h3>James's QQ</h3>
+				<ul>
+					<li><img src="{% static 'blog/images/james_qq.jpg' %}" />
+					</li>
+				</ul>
+			</div>
+		</div><!--end divSidebar -->
+
+
+		<div id="divBottom">
+			<div id="blogPowerBy">
+				<p>版权所有 &copy James long</p>
+				<p>2016.5.4</p>
+			</div><!--end blogPowerBy -->
+		</div><!--end divBottom -->
+
+
+	</div><!--end divMiddle -->
+	</div><!--end divpage -->
+	</div><!--end divAll -->
+	</body>
+</html>
