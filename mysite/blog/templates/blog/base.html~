@@ -6,7 +6,7 @@
 	<title>James Long</title>
 	<style type="text/css">
 	body{padding:0;margin:0;font-size:12px;color:#000000;background-image:url({% static 'blog/images/divbg.jpg' %});background-repeat:no-repeat;background-size:100%;text-align:center;}
-	h2{color:#222;border-top:1px dotted #fff; margin-top:2em}
+	h2{color:#222;border-top:1px dashed #0d18ec; border-left:3px solid #0d18ec;border-bottom:1px dashed #0d18ec;margin-top:0.8em;margin-bottom:0.5em;padding-left:2px;}
 	p{margin:1em 0}
 	#divAll{width:960px;margin:0 auto; padding:0;}
 	#divPage{width:948px;margin:0;padding:0 6px 0 6px; text-align:left;float:left;background-image:url({% static 'blog/images/divPage.png' %});}
@@ -33,6 +33,8 @@
 	div.function h3{font-size:12px;height:16px;margin:0;padding:5px 0 0 5px;color:#484848;background:url({% static 'blog/images/nav_bg1.gif' %}) repeat-x;}
 	div.function ul{text-align:left;width:190px;margin:2px 0 0 0;padding:5px 0 0 0;list-style-position:outside;list-style-type:none;border-top:1px solid #d0d0d0;}
 	div.function li{margin:0;padding:2px 0 2px 15px;}
+	div.main_content{width:738px;margin:0 0 2px 0;padding:0;background:url({% static 'blog/images/bg_content.jpg' %}) repeat-x;}
+	div.main_content p {margin:0 1em 0 1em;height:20px;font-size:14px;}
 	</style>
 	</head>
 	<body>
@@ -66,7 +68,6 @@
 
 
 		<div id="divMain">
-			Here's divMain...
 			{% block content %}
 			{% endblock %}
 		</div><!--end divMain -->
@@ -85,6 +86,14 @@
 				<h3>James's Wechat</h3>
 				<ul>
 					<li><img src="{% static 'blog/images/james_wechat.jpg' %}" />
+					</li>
+				</ul>
+			</div>
+			
+			<div class="function" id="james_purse">
+				<h3>James's 支付宝</h3>
+				<ul>
+					<li><img src="{% static 'blog/images/james_purse.jpg' %}" />
 					</li>
 				</ul>
 			</div>

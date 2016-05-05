@@ -1,8 +1,12 @@
 {% extends "blog/base.html" %}	
 	{% block content %}
 		{% for post in blog_list %}
+		<div class="main_content">
+		<br>
+		<p>{{ post.pub_date}}</p>
 		<h2>{{ post.article_name }}</h2>
-		<p>{{ post.pub_date | date:"1,F jS"}}</p>
+		<p>{{ post.pub_date | date:"Y-m-d"}}</p>
 		<p>{{ post.body }}</p>
+		</div>
 		{% endfor %}
-	<% endblock %}
+	{% endblock %}

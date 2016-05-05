@@ -50,11 +50,6 @@ def events(request):
 def myspacetv(request):
 	return HttpResponse('MySpaceTV here...')
 
-def comedy(request):
-	return HttpResponse('Comedy here...')
-
-def classfields(request):
-	return HttpResponse('ClassFields here...')
 
 def navBlog(request,navBlogValue):
 	return HttpResponse(navBlogValue)
