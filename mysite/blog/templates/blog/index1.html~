@@ -32,14 +32,14 @@
     </div>
     <div class="navigation">
       <ul>
-        <li><a href="/blog/">Home</a></li>
-        <li><a href="/blog/photos/">Photos</a></li>
-        <li><a href="/blog/blogs/">Blogs</a></li>
-        <li><a href="/blog/friends/">Friends</a></li>
-        <li><a href="/blog/hobbies">Hobbies</a></li>
-        <li><a href="/blog/favorites">Favorites</a></li>
-        <li><a href="/blog/forum">Forum</a></li>
-        <li><a href="/blog/groups">Groups</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/blogs/">Blogs</a></li>
+        <li><a href="/friends/">Friends</a></li>
+        <li><a href="/hobbies">Hobbies</a></li>
+        <li><a href="/favorites">Favorites</a></li>
+        <li><a href="/forum">Forum</a></li>
+        <li><a href="/groups">Groups</a></li>
         <li><a href="#">Events</a></li>
         <li> <a href="#">MySpaceTV</a></li>
         <li><a href="#">Music</a></li>

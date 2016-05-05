@@ -2,7 +2,7 @@
 {% load staticfiles %}
 	<style type="text/css">
 	body{padding:0;margin:0;font-size:12px;color:#000000;background-image:url({% static 'blog/images/divbg.jpg' %});background-repeat:no-repeat;background-size:100%;text-align:center;}
-	h2{color:#bf8;border-top:1px dotted #fff; margin-top:2em}
+	h2{color:#222;border-top:1px dotted #fff; margin-top:2em}
 	p{margin:1em 0}
 	#divAll{width:960px;margin:0 auto; padding:0;}
 	#divPage{width:948px;margin:0;padding:0 6px 0 6px; text-align:left;float:left;background-image:url({% static 'blog/images/divPage.png' %});}
