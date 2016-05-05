@@ -46,9 +46,9 @@
 
 		<div id="divNavBar">
 			<ul>
-				<li><a href='/blog/'>Home</a></li>
-				<li><a href='/blog/blogs'>Python</a></li>
-				<li><a href='/blog/blogs'>PHP</a></li>
+				<li><a href='/'>Home</a></li>
+				<li><a href='/blogs'>Python</a></li>
+				<li><a href='/blogs'>PHP</a></li>
 			</ul>
 		</div><!--end divNavBar -->
 
