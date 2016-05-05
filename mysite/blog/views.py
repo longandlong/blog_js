@@ -30,4 +30,36 @@ def blogs(request):
 def friends(request):
 	template = loader.get_template('blog/friends.html')
 	return HttpResponse(template.render())
+
+
+def hobbies(request):
+	return HttpResponse('Hobbies here...')
+
+def favorites(request):
+	return HttpResponse('Favorites here...')
+
+def forum(request):
+	return HttpResponse('Forum here...')
+
+def groups(request):
+	return HttpResponse('Groups here...')
+
+def events(request):
+	return HttpResponse('Events here...')
+
+def myspacetv(request):
+	return HttpResponse('MySpaceTV here...')
+
+def comedy(request):
+	return HttpResponse('Comedy here...')
+
+def classfields(request):
+	return HttpResponse('ClassFields here...')
+
+def navBlog(request,navBlogValue):
+	return HttpResponse(navBlogValue)
+
+
+def music(request):
+	return HttpResponse('Music here ... do re me ...')
 # Create your views here.

@@ -1,6 +1,8 @@
 <html>
 {% load staticfiles %}
 	<head>
+	<link rel="shortcut icon" href="{% static 'blog/favicon.ico' %}" />
+	<link rel="bookmark" href="{% static 'blog/favicon.ico' %}" />
 	<title>James Long</title>
 	<style type="text/css">
 	body{padding:0;margin:0;font-size:12px;color:#000000;background-image:url({% static 'blog/images/divbg.jpg' %});background-repeat:no-repeat;background-size:100%;text-align:center;}
@@ -16,11 +18,12 @@
 	a:visited{color:670E1A;}
 	a:link{color:4E0A13;}
 	a{text-decoration:none;}
-	#divNavBar{float:left;width:948px;border-bottom:1px solid #969EA4;background-image:url({% static 'blog/images/divNavBar.jpg' %});height:24px;white-space:nowrap;overflow:hidden;}
+	#divNavBar{float:left;width:948px;border-bottom:1px solid #969EA4;background-image:url({% static 'blog/images/divNavBar.jpg' %});height:28px;white-space:nowrap;overflow:hidden;}
 	#divNavBar ul{margin:0;padding:0;}
 	ul{list-style-type:none;list-style-position:outside;word-break: break-all;}
 	#divNavBar li{display:inline;float:left;padding :0;margin:0;background:url({% static 'blog/images/bg_line.jpg' %}) no-repeat right 0;}
-	#divNavBar a:link{color:#5ea5fc;}
+	#divNavBar a:link{color:#5ea5fc;font-weight:bold;font-size:16px;}
+	#divNavBar a:hover{color:#2222ff;font-weight:bolf;font-size:18px;}
 	#divNavBar a{float:left;margin:0;padding:6px 10px 4px 10px; height:14px;text-decoration:none;}
 	#divMain{width:738px;margin:0;padding:0;text-align:left;float:right;background-color:#f6f4e9;}
 	#divSidebar{width:190px;margin:0;padding:0 0 2px 0;text-align:center;background-color:#eeeade;}
@@ -48,9 +51,16 @@
 
 		<div id="divNavBar">
 			<ul>
-				<li><a href='/'>Home</a></li>
-				<li><a href='/blogs'>Python</a></li>
-				<li><a href='/blogs'>PHP</a></li>
+				<li><a href='/'>主页</a></li>
+				<li><a href='/blogs/recommend'>推荐文章</a></li>
+				<li><a href='/blogs/feelings'>物语</a></li>
+				<li><a href='/blogs/life'>生活</a></li>
+				<li><a href='/blogs/python'>Python</a></li>
+				<li><a href='/blogs/php'>PHP</a></li>
+				<li><a href='/blogs/javascript'>Javascript</a></li>
+				<li><a href='/blogs/tools'>Tools</a></li>
+				<li><a href='/blogs/pictures'>Pictures</a></li>
+				<li><a href='/music'>Music</a></li>
 			</ul>
 		</div><!--end divNavBar -->
 
@@ -70,6 +80,14 @@
 					</li>
 				</ul>
 			</div>
+
+			<div class="function" id="james_wechat">
+				<h3>James's Wechat</h3>
+				<ul>
+					<li><img src="{% static 'blog/images/james_wechat.jpg' %}" />
+					</li>
+				</ul>
+			</div>
 		</div><!--end divSidebar -->
 
 
@@ -85,4 +103,8 @@
 	</div><!--end divpage -->
 	</div><!--end divAll -->
 	</body>
+	<script>
+		navBar = document.getElementById('divNavBar');
+		
+	</script>
 </html>
