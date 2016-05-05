@@ -33,8 +33,9 @@
 	div.function h3{font-size:12px;height:16px;margin:0;padding:5px 0 0 5px;color:#484848;background:url({% static 'blog/images/nav_bg1.gif' %}) repeat-x;}
 	div.function ul{text-align:left;width:190px;margin:2px 0 0 0;padding:5px 0 0 0;list-style-position:outside;list-style-type:none;border-top:1px solid #d0d0d0;}
 	div.function li{margin:0;padding:2px 0 2px 15px;}
-	div.main_content{width:738px;margin:0 0 2px 0;padding:0;background:url({% static 'blog/images/bg_content.jpg' %}) repeat-x;}
-	div.main_content p {margin:0 1em 0 1em;height:20px;font-size:14px;}
+	div.main_content{width:738px;margin:0 0 4px 0;padding:0;background:url({% static 'blog/images/bg_content.jpg' %}) repeat-x;}
+	div.main_content p {margin:0 1em 0 1em;font-size:14px;line-height:18px;}
+	
 	</style>
 	</head>
 	<body>
