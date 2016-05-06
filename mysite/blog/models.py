@@ -9,19 +9,25 @@ from django.contrib import admin
 # Create your models here.
 @python_2_unicode_compatible
 class Article(models.Model):
-
+	
 	article_name = models.CharField(max_length=200)
 	body = models.TextField()
 	pub_date = models.DateTimeField('data publised')
-
+	LIFE = 'LF'
+	PYTHON = 'PY'
+	FEELING = 'FL'
+	JAVASCRIPT = 'JS'
+	PHP = 'PH'
+	TOOLS = 'TL'
+	
+	CLASS_OF_ARTICLE = ((LIFE,'life'),(PYTHON,'python'),(FEELING,'feelings'),(JAVASCRIPT,'Javascript'),(PHP,'php'),(TOOLS,'tools'))
+	class_of_article = models.CharField(max_length=2,choices=CLASS_OF_ARTICLE,default=LIFE)
 	def __str__(self):
 		return self.article_name
-
 	def was_published_recently(self):
 		return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 	def digest(self):
 		return self.body[:100]
-
 @python_2_unicode_compatible
 class Comment(models.Model):
 
