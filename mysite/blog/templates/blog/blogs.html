@@ -4,7 +4,7 @@
 		<div class="main_content">
 		<br>
 		<p>{{ post.pub_date | date:"Y-m-d"}}</p>
-		<h2>{{ post.article_name }}</h2>
+		<h2><a href="/blogs/details/{{ post.id }}/">{{ post.article_name }}</a></h2>
 		<p>{{ post.body }}</p>
 		</div>
 		{% endfor %}

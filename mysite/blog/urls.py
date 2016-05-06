@@ -13,5 +13,6 @@ urlpatterns = [
 	url(r'^events/$', views.events, name = 'events'),
 	url(r'^myspacetv/$', views.myspacetv, name = 'myspacetv'),
 	url(r'^music/$', views.music, name = 'music'),
+	url(r'^blogs/details/(\d*)/$',views.details,name = 'details'),
 	url(r'^blogs/(.*?)/$',views.navBlog,name = 'navBlog'),
 ]
