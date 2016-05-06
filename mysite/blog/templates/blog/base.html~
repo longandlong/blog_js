@@ -6,7 +6,7 @@
 	<title>James Long</title>
 	<style type="text/css">
 	body{padding:0;margin:0;font-size:12px;color:#000000;text-align:center;}
-	h2{color:#222;border-top:1px dashed #DBDBDB; border-left:3px solid #73A0D4;border-bottom:1px dashed #DBDBDB;margin-top:0.8em;margin-bottom:0.5em;padding-left:2px;}
+	h2{color:#222;border-top:1px dashed #73A0D4; border-left:3px solid #73A0D4;border-bottom:1px dashed #73A0D4;margin-top:0.8em;margin-bottom:0.5em;padding-left:2px;}
 	p{margin:1em 0}
 	#divAll{width:960px;margin:0 auto; padding:0;}
 	#divPage{width:948px;margin:0;padding:0 6px 0 6px; text-align:left;float:left;background-image:url({% static 'blog/images/divPage.png' %});}
@@ -22,8 +22,8 @@
 	#divNavBar ul{margin:0;padding:0;}
 	ul{list-style-type:none;list-style-position:outside;word-break: break-all;}
 	#divNavBar li{display:inline;float:left;padding :0;margin:0;background:url({% static 'blog/images/bg_line.jpg' %}) no-repeat right 0;}
-	#divNavBar a:link{color:#5ea5fc;font-weight:bold;font-size:16px;}
-	#divNavBar a:hover{color:#2222ff;font-weight:bolf;font-size:18px;}
+	#divNavBar a:link{color:#5ea5fc;font-weight:normal;font-size:16px;}
+	#divNavBar a:hover{color:#2222ff;font-weight:bold;}
 	#divNavBar a{float:left;margin:0;padding:6px 10px 4px 10px; height:14px;text-decoration:none;}
 	#divMain{width:738px;margin:0;padding:0;text-align:left;float:right;background-color:#f6f4e9;}
 	#divSidebar{width:190px;margin:0;padding:0 0 2px 0;text-align:center;background-color:#eeeade;}
