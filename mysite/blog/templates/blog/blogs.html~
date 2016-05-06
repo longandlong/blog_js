@@ -4,8 +4,9 @@
 		<div class="main_content">
 		<br>
 		<p>{{ post.pub_date | date:"Y-m-d"}}</p>
-		<h2><a href="/blogs/details/{{ post.article_name }}/">{{ post.article_name }}</a></h2>
-		<p>{{ post.body }}</p>
+		<h2><a href="/blogs/details/{{ post.id }}/">{{ post.article_name }}</a></h2>
+		<p>{{ post.digest }}[......]</p>
+		<p><a href="/blogs/details/{{ post.id }}/">戳我瞧更多</a></p>
 		</div>
 		{% endfor %}
 	{% endblock %}

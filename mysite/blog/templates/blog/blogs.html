@@ -5,7 +5,8 @@
 		<br>
 		<p>{{ post.pub_date | date:"Y-m-d"}}</p>
 		<h2><a href="/blogs/details/{{ post.id }}/">{{ post.article_name }}</a></h2>
-		<p>{{ post.body }}</p>
+		<p>{{ post.digest }}[......]</p>
+		<p><a href="/blogs/details/{{ post.id }}/">Read more</a></p>
 		</div>
 		{% endfor %}
 	{% endblock %}

@@ -19,7 +19,8 @@ class Article(models.Model):
 
 	def was_published_recently(self):
 		return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-
+	def digest(self):
+		return self.body[:100]
 
 @python_2_unicode_compatible
 class Comment(models.Model):
