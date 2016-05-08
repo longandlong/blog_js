@@ -22,7 +22,7 @@
 	#divNavBar ul{margin:0;padding:0;}
 	ul{list-style-type:none;list-style-position:outside;word-break: break-all;}
 	#divNavBar li{display:inline;float:left;padding :0;margin:0;background:url({% static 'blog/images/bg_line.jpg' %}) no-repeat right 0;}
-	#divNavBar a:link{color:#5ea5fc;font-weight:normal;font-size:16px;}
+	#divNavBar a:link{color:#5ea5fc;font-weight:bold;font-size:16px;}
 	#divNavBar a:hover{color:#2222ff;font-weight:bold;}
 	#divNavBar a{float:left;margin:0;padding:6px 10px 4px 10px; height:14px;text-decoration:none;}
 	#divMain{width:738px;margin:0;padding:0;text-align:left;float:right;background-color:#f6f4e9;}
@@ -41,6 +41,7 @@
 	{% endblock %}
 	</head>
 	<body>
+
 	<div id="divAll">
 	<div id="divpage">
 	<div id="divMiddle">

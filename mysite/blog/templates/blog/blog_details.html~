@@ -3,7 +3,7 @@
 {% load staticfiles %}
 {% block style %}
 <style>
-div.detail{width:738px;height:150%;margin:0;padding:0;text-align:left;float:right;background:url({% static 'blog/images/bg_detail.jpg' %}) repeat-y;}
+div.detail{width:738px;height:150%;margin:0;padding:0;text-align:left;float:right;background:url({% static 'blog/images/bg_content.jpg' %}) repeat-y;}
 div.detail h1{margin:0;padding:1em 0 0.3em 0;text-align:center;}
 #date{text-align:center;font-size:14px;}
 div.detail p{font-size:18px;text-indent:2em;}
@@ -13,6 +13,9 @@ div.detail p{font-size:18px;text-indent:2em;}
 	<div class="detail">
 	<h1>{{blog_detail.article_name }}</h1>
 	<p id="date">{{blog_detail.pub_date | date:"Y:m:d" }}</P>
-	<p>{{ blog_detail.body }}</p>
+	<p><script type="text/javascript">
+			var str="{{blog_detail.get_body}}";
+			document.write(str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"'));
+			</script></p>
 	</div>
 {% endblock %}

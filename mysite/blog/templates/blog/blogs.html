@@ -5,7 +5,10 @@
 		<br>
 		<p>{{ post.pub_date | date:"Y-m-d"}}</p>
 		<h2><a href="/blogs/details/{{ post.id }}/">{{ post.article_name }}</a></h2>
-		<p>{{ post.digest }}[......]</p>
+		<p><script type="text/javascript">
+			var str="{{post.digest}}";
+			document.write(str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"') + '(...)');
+			</script></p>
 		<p><a href="/blogs/details/{{ post.id }}/">Read more</a></p>
 		</div>
 		{% endfor %}

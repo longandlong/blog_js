@@ -24,10 +24,16 @@ class Article(models.Model):
 	class_of_article = models.CharField(max_length=2,choices=CLASS_OF_ARTICLE,default=LIFE)
 	def __str__(self):
 		return self.article_name
+
+	def get_body(self):
+		html = self.body.replace('&lt;','<').replace('&gt;','>')
+		html = ' '.join(html.split())
+		return html
 	def was_published_recently(self):
 		return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 	def digest(self):
-		return self.body[:100]
+		html = self.get_body()
+		return html[:200]
 @python_2_unicode_compatible
 class Comment(models.Model):
 
