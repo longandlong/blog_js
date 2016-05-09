@@ -1,8 +1,52 @@
-{% if latest_articles %}
-	<url>
-	{% for article in latest_articles %}
-		<li><a href="/blog/{{ article.id }}/">{{ article.article_name }}</a></li>
-	{% endfor %}
-{% else %}
-	<p> There is no article here!</p
-{% endif %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>James Long</title>
+{% load staticfiles %}
+<link rel="shortcut icon" href="{% static 'blog/favicon.ico' %}" />
+<link rel="bookmark" href="{% static 'blog/favicon.ico' %}" />
+	<script type="text/javascript" src="{% static 'blog/jquery-1.12.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'blog/seajs/dist/sea.js' %}"></script>
+	<style type="text/css">
+		html,body,ul{height:100%;margin:0;padding: 0;}
+		#James{width:50%;height:100%;margin: 0 auto;padding:0;background-color:#f5f5f5;text-align: center;font-size: 12px;overflow: hidden;}
+		#James ul{text-decoration: none;}
+		#James li{list-style: none;font-size: 18px;}
+		#James a{text-decoration: none;color:#c5c5c5;}
+		#James a:hover{color:#2d96bd;}
+		#nav{height:100%;}
+		.navdiv{width:100%;height: 20%;}
+		.navbar{width:100%;height: 50%;}
+	</style>
+</head>
+<body>
+	<div id="James">
+		<div id="nav">
+		<ul>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="blogs"><li id="0"><a id="blog" href="#">Blog</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="photos"><li id="1"><a id="photo" href="#">Photo</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="gustbooks"><li id="2"><a id="gustbook" href="#">GustBook</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="musics"><li id="3"><a id="music" href="#">Music</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="aboutmes"><li id="4"><a id="aboutme" href="#">About Me</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="blogs"><li id="5"><a id="blog" href="#">Blog</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="photos"><li id="6"><a id="photo" href="#">Photo</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="gustbooks"><li id="7"><a id="gustbook" href="#">GustBook</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="musics"><li id="8"><a id="music" href="#">Music</a></li></div></div>
+			<div class="navdiv"><div class="navbar"></div><div class="navbar" id="aboutmes"><li id="9"><a id="aboutme" href="#">About Me</a></li></div></div>
+		</ul></div>
+	</div>
+
+	<script type="text/javascript">
+		var $ = function(id) {
+			return document.getElementById(id);
+		};
+		seajs.config({
+			base:"./seajs/"
+
+		})
+		seajs.use("./slide.js",function(slide){
+			slide.init($("nav"));
+		});
+	</script>
+</body>
+</html>
