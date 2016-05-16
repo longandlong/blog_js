@@ -7,7 +7,7 @@
 		<h2><a href="/blogs/details/{{ post.id }}/">{{ post.article_name }}</a></h2>
 		<p><script type="text/javascript">
 			var str="{{post.digest}}";
-			document.write(str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"') + '(...)');
+			document.write(str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&ldquo/g, '“').replace(/&rdquo/g, '”') + '(...)');
 			</script></p>
 		<p><a href="/blogs/details/{{ post.id }}/">Read more</a></p>
 		</div>
