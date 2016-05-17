@@ -15,7 +15,7 @@ div.detail p{font-size:18px;text-indent:2em;}
 	<p id="date">{{blog_detail.pub_date | date:"Y:m:d" }}</P>
 	<p><script type="text/javascript">
 			var str="{{blog_detail.get_body}}";
-			document.write(str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&ldquo/g, '“').replace(/&rdquo/g, '”').replace(/&nbsp;/g, " ").replace(/&cap;/g, "∩"));
+			document.write(str.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&amp;ldquo;/g, '“').replace(/&amp;rdquo;/g, '”').replace(/&amp;nbsp;/g, " ").replace(/&amp;cap;/g, "∩"));
 			</script></p>
 	</div>
 {% endblock %}
