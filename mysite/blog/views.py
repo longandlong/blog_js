@@ -19,6 +19,10 @@ def photos(request):
 	template = loader.get_template('blog/photos.html')
 	return HttpResponse(template.render())
 
+def photosMore(request):
+	template = loader.get_template('blog/photo_2.html')
+	return HttpResponse(template.render())
+
 def blogs(request):
 	blog_list = Article.objects.order_by('-pub_date')[:10]
 	#template = loader.get_template('blog/blogs.html')
