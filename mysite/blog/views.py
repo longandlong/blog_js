@@ -16,7 +16,7 @@ def details(request, article_id):
 	return render_to_response('blog/blog_details.html', {'blog_detail':blog_detail})
 
 def photos(request):
-	template = loader.get_template('blog/3/0/index.html')
+	template = loader.get_template('blog/photos.html')
 	return HttpResponse(template.render())
 
 def blogs(request):
