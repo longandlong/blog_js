@@ -61,7 +61,7 @@ def navBlog(request,navBlogValue):
 	javascript = 'JS'
 	php = 'PH'
 	tools = 'TL'
-	nav_value =Article.objects.filter(class_of_article = nav.get(navBlogValue))
+	nav_value =Article.objects.order_by('-pub_date').filter(class_of_article = nav.get(navBlogValue))
 	#return HttpResponse(nav_value[1])
 	return render_to_response('blog/blogs.html',{'blog_list':nav_value})
 

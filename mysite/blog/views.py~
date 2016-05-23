@@ -20,7 +20,7 @@ def photos(request):
 	return HttpResponse(template.render())
 
 def photosMore(request):
-	template = loader.get_template('blog/photos.html')
+	template = loader.get_template('blog/photo_2.html')
 	return HttpResponse(template.render())
 
 def blogs(request):
