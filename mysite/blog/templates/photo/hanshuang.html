@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>James Long</title>
+	{% load staticfiles %}
+	<link rel="shortcut icon" href="{% static 'blog/favicon.ico' %}" />
+	<link rel="bookmark" href="{% static 'blog/favicon.ico' %}" />
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+		body{
+			background-color: #000000;
+			margin: 0;
+			font-family: Helvetica, sans-serif;
+			overflow: hidden;
+		}
+		a{
+			color:#ffffff;
+			cursor: pointer;
+		}
+		.element {
+				width: 480px;
+				height: 640px;
+				box-shadow: 0px 100px 100px rgba(0,255,255,0.95);
+				border: 1px solid rgba(127,255,255,0.25);
+				text-align: center;
+				padding-top: 10px;
+				cursor: default;
+			}
+
+			.element:hover {
+				box-shadow: 0px 100px 100px rgba(255,0,255,0.95);
+				border: 1px solid rgba(127,255,255,0.75);
+			}
+		#more{
+			text-align: center;
+		}
+		#more p{
+			margin-top: 8%;
+			font-size: 100px;
+		}
+		#more a{
+			text-decoration: none;
+			color: #a0a0a0;
+		}
+		#more a:hover{
+			text-decoration: none;
+			color: #f5f5f5;
+		}
+	</style>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="container"></div>
+	<div id="more" style="color:white;">
+		<p><a href="#">more</a></p>
+	</div>
+	<script src="{% static 'blog/js/three.min.js' %}"</script>
+	<script src="{% static 'blog/js/tween.min.js' %}"></script>
+	<script src="{% static 'blog/js/TrackballControls.js' %}"></script>
+	<script src="{% static 'blog/js/CSS3DRenderer.js' %}"></script>
+	<script type="text/javascript">
+		var camera,scene,renderer,controls;
+		init();
+		function init(){
+			camera = new THREE.PerspectiveCamera(45,window.innerWidth / window.innerHeight,1,10000);
+			camera.position.z = 10000;
+			
+			//camera.position.x = 1200
+			scene = new THREE.Scene();
+			
+			for(var i = 0;i<34;i++){
+				var element = document.createElement('div');
+				element.className = 'element';
+				element.style.backgroundColor = 'rgba(0,127,127,'+( Math.random() * 0.5 + 0.25 ) + ')';
+				var image = document.createElement('img');
+				image.src = '/static/blog/images/hanshuang/'+i+'.jpg';
+				image.style.width = 400+ 'px';
+				image.style.height = 560 + 'px';
+				element.appendChild(image);
+
+				var object = new THREE.CSS3DObject(element);
+				object.position.x=4000*Math.cos(2/34*i*Math.PI);
+				object.position.z =4000*Math.sin(2/34*i*Math.PI)+5000;
+				object.lookAt(new THREE.Vector3(0,0,5000));
+				scene.add(object);
+			}
+			var element = document.createElement('div');
+			//element.className = 'element';
+			element.style.backgroundColor = 'rgba(0,127,127,0)';
+        	var image = document.createElement('img');
+				image.src = '{% static 'blog/images/hanshuang/hanshuang.png' %}';
+				image.style.width = 800+ 'px';
+				image.style.height = 1120 + 'px';
+				element.appendChild(image);
+			var object = new THREE.CSS3DObject(element);
+			object.position.z = 5000;
+			scene.add(object);
+
+			renderer = new THREE.CSS3DRenderer();
+			renderer.setSize(window.innerWidth,window.innerHeight/2);
+			renderer.domElement.style.position = 'absolute';
+			document.getElementById('container').appendChild(renderer.domElement);
+			
+			/*controls = new THREE.TrackballControls(camera,renderer.domElement);
+				controls.rotateSpeed = 5.0;
+				controls.minDistance = 100;
+				controls.maxDistance = 8000;
+				controls.zoomSpeed=0.8;
+				controls.addEventListener( 'change', render );*/
+				}
+			animate();
+			render();
+			var step = 0;
+			function animate(){
+				//controls.update();
+				step = step+0.0005;
+				
+				camera.position.x =5000*Math.cos((step+0.5)*Math.PI);
+				camera.position.z =5000*Math.sin((step+0.5)*Math.PI)+5250;
+				camera.lookAt(new THREE.Vector3(0,0,5000));
+				//console.log(camera.position.x);
+				render();
+				requestAnimationFrame(animate);
+				
+			}
+			function render(){
+				renderer.render(scene,camera);
+			}
+			var more = document.getElementById('more');
+			more.style.paddingTop = window.innerHeight/2+'px';
+			more.style.height = window.innerHeight/2 + 'px';
+			console.log(more);
+	</script>
+</body>
+</html>
